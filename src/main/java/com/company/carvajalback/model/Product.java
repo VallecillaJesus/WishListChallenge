@@ -8,11 +8,22 @@ import javax.persistence.Id;
 public class Product implements State{
 
     @Id
+    @GeneratedValue()
     private Integer id;
     private String name;
     private Double price;
     private Integer stockQuantity;
     private Boolean isEnabled;
+
+    public Product(){}
+
+    public Product(String name, Double price, Integer stockQuantity, Boolean isEnabled) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+        this.isEnabled = isEnabled;
+    }
 
     public Integer getId() {
         return id;

@@ -14,6 +14,13 @@ public class Users {
     @Column(length = 30)
     private String username;
 
+    public Users(){}
+
+    public Users(String username) {
+        this.id = id;
+        this.username = username;
+    }
+
     public Integer getId() {
         return id;
     }
